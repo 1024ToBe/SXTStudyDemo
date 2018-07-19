@@ -10,12 +10,13 @@
 #define UtilsMacros_h
 
 #ifdef DEBUG
-#define ZWWLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define ZWWLog(fmt, ...) printf("VCName: <%s: (LINE %d) >  %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:(fmt), ##__VA_ARGS__] UTF8String] )
+//NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define ZWWLog(...)
 #endif
 
-#define kWeakSelf(type)     __weak typeof(type) weak##type = type;
+#define kWeakSelf(type)     __weak typeof(type) weak##type = type
 #define KScreenWidth        [[UIScreen mainScreen] bounds].size.width
 #define KScreenHeight       [[UIScreen mainScreen] bounds].size.height
 #define KLocalMP4Url        @"http://cloud.video.taobao.com/play/u/2712925557/p/1/e/6/t/1/40050769.mp4"

@@ -31,6 +31,7 @@
     self.task = [self.session downloadTaskWithResumeData:self.resumeData];
     //继续下载
     [self.task resume];
+
 }
 
 //暂停下载
@@ -45,6 +46,8 @@
 
 //开始下载
 - (IBAction)startDownLoadFile:(id)sender {
+    //最新中文处理
+    //NSString *str = [@"ssfd" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     //初始化一个含delegate的session
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];

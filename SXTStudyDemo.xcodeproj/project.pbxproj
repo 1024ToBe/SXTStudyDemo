@@ -17,6 +17,12 @@
 		0416359620BFEBB0001A15F1 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 0416358F20BFEBAF001A15F1 /* zip.c */; };
 		0416359720BFEBB0001A15F1 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0416359220BFEBAF001A15F1 /* SSZipArchive.m */; };
 		0416359A20BFFBF1001A15F1 /* ZWWNSURLSessionDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0416359920BFFBF1001A15F1 /* ZWWNSURLSessionDelegateViewController.m */; };
+		043DF14A210039FC00D62A7D /* ZWWAFNPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF148210039FC00D62A7D /* ZWWAFNPracticeViewController.m */; };
+		043DF14B210039FC00D62A7D /* ZWWAFNPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DF149210039FC00D62A7D /* ZWWAFNPracticeViewController.xib */; };
+		043DF1512100585500D62A7D /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF14F2100585500D62A7D /* NSString+Hash.m */; };
+		043DF15421005C6A00D62A7D /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF15321005C6A00D62A7D /* UIImageView+SDWebImage.m */; };
+		043DF15D2100674200D62A7D /* ZWWHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF15C2100674200D62A7D /* ZWWHttpTool.m */; };
+		043DF164210072BB00D62A7D /* ZSHBaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF162210072BB00D62A7D /* ZSHBaseFunction.m */; };
 		045A17D820B6831500644DEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A17D720B6831500644DEC /* AppDelegate.m */; };
 		045A17E020B6831B00644DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045A17DF20B6831B00644DEC /* Assets.xcassets */; };
 		045A17E320B6831C00644DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045A17E120B6831C00644DEC /* LaunchScreen.storyboard */; };
@@ -72,6 +78,18 @@
 		0416359220BFEBAF001A15F1 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		0416359820BFFBF1001A15F1 /* ZWWNSURLSessionDelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWNSURLSessionDelegateViewController.h; sourceTree = "<group>"; };
 		0416359920BFFBF1001A15F1 /* ZWWNSURLSessionDelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWNSURLSessionDelegateViewController.m; sourceTree = "<group>"; };
+		043DF147210039FC00D62A7D /* ZWWAFNPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWAFNPracticeViewController.h; sourceTree = "<group>"; };
+		043DF148210039FC00D62A7D /* ZWWAFNPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWAFNPracticeViewController.m; sourceTree = "<group>"; };
+		043DF149210039FC00D62A7D /* ZWWAFNPracticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWAFNPracticeViewController.xib; sourceTree = "<group>"; };
+		043DF14E2100585500D62A7D /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		043DF14F2100585500D62A7D /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		043DF15221005C6A00D62A7D /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
+		043DF15321005C6A00D62A7D /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
+		043DF15B2100674200D62A7D /* ZWWHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWHttpTool.h; sourceTree = "<group>"; };
+		043DF15C2100674200D62A7D /* ZWWHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWHttpTool.m; sourceTree = "<group>"; };
+		043DF16121006FE600D62A7D /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
+		043DF162210072BB00D62A7D /* ZSHBaseFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSHBaseFunction.m; sourceTree = "<group>"; };
+		043DF163210072BB00D62A7D /* ZSHBaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSHBaseFunction.h; sourceTree = "<group>"; };
 		045A17D320B6831500644DEC /* SXTStudyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXTStudyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045A17D620B6831500644DEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		045A17D720B6831500644DEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -160,6 +178,47 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		043DF14C2100585500D62A7D /* NSString-Hash */ = {
+			isa = PBXGroup;
+			children = (
+				043DF14E2100585500D62A7D /* NSString+Hash.h */,
+				043DF14F2100585500D62A7D /* NSString+Hash.m */,
+			);
+			path = "NSString-Hash";
+			sourceTree = "<group>";
+		};
+		043DF155210066A400D62A7D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				043DF163210072BB00D62A7D /* ZSHBaseFunction.h */,
+				043DF162210072BB00D62A7D /* ZSHBaseFunction.m */,
+				043DF1562100670400D62A7D /* HttpTool */,
+				043DF1572100670400D62A7D /* SDWebImageTool */,
+				04DD4CFE20BBED7600B9D2A3 /* Reachability */,
+				0416358620BFEBAF001A15F1 /* SSZipArchive */,
+				043DF14C2100585500D62A7D /* NSString-Hash */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		043DF1562100670400D62A7D /* HttpTool */ = {
+			isa = PBXGroup;
+			children = (
+				043DF15B2100674200D62A7D /* ZWWHttpTool.h */,
+				043DF15C2100674200D62A7D /* ZWWHttpTool.m */,
+			);
+			path = HttpTool;
+			sourceTree = "<group>";
+		};
+		043DF1572100670400D62A7D /* SDWebImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				043DF15221005C6A00D62A7D /* UIImageView+SDWebImage.h */,
+				043DF15321005C6A00D62A7D /* UIImageView+SDWebImage.m */,
+			);
+			path = SDWebImageTool;
+			sourceTree = "<group>";
+		};
 		045A17CA20B6831500644DEC = {
 			isa = PBXGroup;
 			children = (
@@ -185,10 +244,10 @@
 		045A17D520B6831500644DEC /* SXTStudyDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0416358620BFEBAF001A15F1 /* SSZipArchive */,
-				04DD4CFE20BBED7600B9D2A3 /* Reachability */,
+				043DF155210066A400D62A7D /* Tools */,
 				045A180F20B683C600644DEC /* PrefixHeader.pch */,
 				045A180E20B683AE00644DEC /* UtilsMacros.h */,
+				043DF16121006FE600D62A7D /* URLMacros.h */,
 				045A180B20B6836600644DEC /* ZWWTableViewController.h */,
 				045A180920B6836600644DEC /* ZWWTableViewController.m */,
 				045A180A20B6836600644DEC /* ZWWTableViewController+method.h */,
@@ -207,6 +266,9 @@
 				040EDE7420C239DB00CCA8A6 /* ZWWAFNViewController.h */,
 				040EDE7520C239DB00CCA8A6 /* ZWWAFNViewController.m */,
 				040EDE7620C239DB00CCA8A6 /* ZWWAFNViewController.xib */,
+				043DF147210039FC00D62A7D /* ZWWAFNPracticeViewController.h */,
+				043DF148210039FC00D62A7D /* ZWWAFNPracticeViewController.m */,
+				043DF149210039FC00D62A7D /* ZWWAFNPracticeViewController.xib */,
 				045A17D620B6831500644DEC /* AppDelegate.h */,
 				045A17D720B6831500644DEC /* AppDelegate.m */,
 				040EDE7B20C2980900CCA8A6 /* flower.jpg */,
@@ -369,6 +431,7 @@
 			files = (
 				047B75F520BE8EE300154E1A /* ZWWDownBigFileViewController.xib in Resources */,
 				04672D1020C0E61F005E506E /* ZWWSessionDelegateDownFileVC.xib in Resources */,
+				043DF14B210039FC00D62A7D /* ZWWAFNPracticeViewController.xib in Resources */,
 				045A17E320B6831C00644DEC /* LaunchScreen.storyboard in Resources */,
 				04BDD1F720C637E400FCA2D8 /* christmass_star_2.png in Resources */,
 				040EDE7C20C2980900CCA8A6 /* flower.jpg in Resources */,
@@ -420,12 +483,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043DF14A210039FC00D62A7D /* ZWWAFNPracticeViewController.m in Sources */,
 				0416359620BFEBB0001A15F1 /* zip.c in Sources */,
 				045A180C20B6836600644DEC /* ZWWTableViewController+method.m in Sources */,
 				047B75EF20BE827800154E1A /* ZWWDownFileViewController.m in Sources */,
 				0416359A20BFFBF1001A15F1 /* ZWWNSURLSessionDelegateViewController.m in Sources */,
 				0416359420BFEBB0001A15F1 /* mztools.c in Sources */,
+				043DF164210072BB00D62A7D /* ZSHBaseFunction.m in Sources */,
+				043DF1512100585500D62A7D /* NSString+Hash.m in Sources */,
 				040EDE7720C239DB00CCA8A6 /* ZWWAFNViewController.m in Sources */,
+				043DF15421005C6A00D62A7D /* UIImageView+SDWebImage.m in Sources */,
 				0416359320BFEBB0001A15F1 /* ioapi.c in Sources */,
 				045A180D20B6836600644DEC /* ZWWTableViewController.m in Sources */,
 				045A17E620B6831C00644DEC /* main.m in Sources */,
@@ -435,6 +502,7 @@
 				04672D0F20C0E61F005E506E /* ZWWSessionDelegateDownFileVC.m in Sources */,
 				045A17D820B6831500644DEC /* AppDelegate.m in Sources */,
 				04DD4D0120BBED7600B9D2A3 /* Reachability.m in Sources */,
+				043DF15D2100674200D62A7D /* ZWWHttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SXTStudyDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = SXTStudyDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -616,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SXTStudyDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = SXTStudyDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

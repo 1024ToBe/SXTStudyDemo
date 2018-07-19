@@ -54,11 +54,7 @@
     
     //3.开启监测
     [reach startNotifier];
-    
-    
 }
-
-
 
 - (void)changeNetStatus:(NSNotification *)noti{
     Reachability *reach = noti.object;
@@ -79,6 +75,7 @@
             break;
     }
 }
+
 //Block监测网络状态
 - (void)testNetWorkWithBlock{
     //1.创建监听通知
@@ -113,6 +110,8 @@
     //3.开启监测
     [reach startNotifier];
 }
+
+/*******************************************NSURLConnection*****************************************/
 
 //NSURLConnection 异步请求
 - (void)testAsynNSURLConnection{
@@ -236,11 +235,13 @@
     
 }
 
+/*******************************************NSURLSession*****************************************/
+
 //NSURLSession:get 请求
 - (void)NSURLSessionGetURLFunc{
    
     //如果有中文进行中文转码(比如get请求需要拼接的参数value值为中文，不转码可能会导致该url为nil)
-    //url = [url stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    //urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
     
     NSString *from = @"qianqian";
     NSString *version = @"2.1";
@@ -249,23 +250,25 @@
     NSString *tinguid = @"7994";
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?from=%@&version=%@&method=%@&format=%@&tinguid=%@",KTestRequestBaseUrl,from,version,method,format,tinguid]];
     
+    //get请求可以直接通过Url发起请求，但是post请求必须得通过配置request来进行请求
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    //创建一个会话
-    //session 默认是挂起状态
+    //1.创建一个会话
     NSURLSession *session = [NSURLSession sharedSession];
-    //开启一个任务:方法1.通过url开启任务
+    //2.session开启一个任务:
+    //方法1.通过url开启任务，NSURLSessionDataTask默认是挂起状态
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        ZWWLog(@"NSURLSession 请求返回数据==%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+        ZWWLog(@"NSURLSession get请求返回数据==%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
     }];
     
-    //开启一个任务:方法2.通过request开启任务
+
+    //开启一个任务:方法2.通过request开启任务（post必用，get可直接通过url来请求数据）
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 //         ZWWLog(@"NSURLSession 请求返回数据==%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
 //    }];
     
-    //执行任务
+    //3.执行任务
     [task resume];
     
 }
@@ -314,13 +317,21 @@
     [[session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         //当前临时文件的地址
         ZWWLog(@"下载完毕，文件存储位置location==%@",location);
+        //路径下的文件下载过程中存在，下载完成后就会不存在了
+        //原理：下载过程中就直接写入文件了，写在这个目录下的临时文件夹中。当下载完之后，执行这个block方法了，就直接把tmp清除了
+        //所以我们要做的是：下载完成执行此block的时候把文件转存到另一个路径下，这样就可以看到下载的文件了
         
         //保存之后的地址(获取本地沙盒路径)
+        //response.suggestedFilename:网络响应头回传的文件名
         NSString *cachePath = [[NSSearchPathForDirectoriesInDomains(13, 1, 1) lastObject]stringByAppendingPathComponent:response.suggestedFilename];
+        ZWWLog(@"下载完毕，移动到的文件目录==%@",cachePath);
         NSURL *toURL = [NSURL fileURLWithPath:cachePath];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSError *error1 = nil;
+    
+        //将临时文件移动到缓存文件目录中
         [fileManager moveItemAtURL:location toURL:toURL error:&error1];
+        
         ZWWLog(@"erroer==%@",error);
         
         
@@ -331,7 +342,7 @@
 //解压文件
 - (void)unZip{
     
-   BOOL unZip = [SSZipArchive unzipFileAtPath:@"/Users/mac/Desktop/logo.zip" toDestination:@"/Users/mac/Desktop/logo" uniqueId:@"logo"];
+   BOOL unZip = [SSZipArchive unzipFileAtPath:@"/Users/mac/Desktop/dmg.zip" toDestination:@"/Users/mac/Desktop/dmg" uniqueId:@"dmg"];
     if (unZip) {
         ZWWLog(@"解压成功");
     }else{
@@ -344,7 +355,7 @@
 - (void)createZip{
     
   //第一个参数：压缩完成的文件zip路径名字，第二个参数：被压缩的文件路径
-  BOOL createZip = [SSZipArchive createZipFileAtPath:@"/Users/mac/Desktop/btn.zip" withContentsOfDirectory:@"/Users/mac/Desktop/btn"];
+  BOOL createZip = [SSZipArchive createZipFileAtPath:@"/Users/mac/Desktop/dmg.zip" withContentsOfDirectory:@"/Users/mac/Desktop/dmg"];
     if (createZip) {
         ZWWLog(@"压缩成功");
     }else{

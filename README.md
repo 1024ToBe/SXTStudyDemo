@@ -1,0 +1,13 @@
+NSURLConnection  :比较古老经典的一个网络请求类。它在iOS9.0已经确定弃用。国内现在一般最低适配版本是7.0，8.0，所以NSURLConnection还可以使用
+
+NSURLSession(会话层):用来替代NSURLConnection.
+它相比NSURLConnection更灵活，更好用
+点击NSURLSession查看代码，发现其初始化方法有：单例初始化方法，还有通过configuration初始化方法
+
+NSURLSessionDataTask->NSURLSessionTask: 任务默认是挂起状态,使用之前执行resume操作
+NSURLSessionDownloadTask->NSURLSessionTask
+NSURLSessionUploadTask->NSURLSessionDataTask->NSURLSessionTask：一般不用(NSURLSession,NSURLConnection)它实现多上传太麻烦。一般用AFN
+
+NSURLSession相当于一个大的容器，里面装有很多类似NSURLSessionDataTask，NSURLSessionUploadTask，NSURLSessionDownloadTask这样的task
+
+项目中使用SSZipArchive 编译会报错，需要导入libz库

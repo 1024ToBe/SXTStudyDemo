@@ -38,7 +38,10 @@
     NSString *params = [NSString stringWithFormat:@"from=%@&version=%@&method=%@&format=%@&tinguid=%@",from,version,method,format,tinguid];
     //设置请求体
     request.HTTPBody = [params dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //request方法
     [[session dataTaskWithRequest:request]resume];
+    //直接通过url的方法
 //    [[session dataTaskWithURL:[NSURL URLWithString:@"http://www.baidu.com"]] resume];
     
 }
@@ -53,7 +56,7 @@ didReceiveResponse:(NSURLResponse *)response
     completionHandler(NSURLSessionResponseAllow);
 }
 
-//开始接收下载数据：有可能调用多次
+//开始接收下载数据（得到服务器回传数据）：有可能调用多次
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask
     didReceiveData:(NSData *)data{
     ZWWLog(@"接收到的数据data == %@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
