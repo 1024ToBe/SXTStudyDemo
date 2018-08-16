@@ -113,7 +113,7 @@
 }
 - (IBAction)packAFNUpload:(id)sender {
     UIImage *image = [UIImage imageNamed:@"flower.jpg"];
-    [ZWWHttpTool uploadWithUrlStr:@"LocalServer/jpg" params:nil thumbName:@"" image:[] success:^(id responseObject) {
+    [ZWWHttpTool uploadWithUrlStr:@"LocalServer/jpg" params:nil thumbName:@"userFile00" image:image success:^(id responseObject) {
         ZWWLog(@"上传成功==%@",responseObject);
     } failed:^(NSError *error) {
         ZWWLog(@"上传失败");

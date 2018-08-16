@@ -27,7 +27,22 @@
         //接收参数类型
         client.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json",@"text/javascript",@"text/plain",@"image/gif",nil];
         //安全策略
+        //1.使用非检验证书模式(可以使用抓包工具抓取https请求数据)
         client.securityPolicy = [AFSecurityPolicy defaultPolicy];
+        
+        //2.使用检验证书模式(不可以使用抓包工具抓取https请求数据)
+        //先导入证书
+//        NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"hgcang" ofType:@"cer"];//证书的路径
+//        NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+//        
+//        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+//        securityPolicy.pinnedCertificates = @[cerData];
+//        client.securityPolicy = securityPolicy;
+        //客户端是否信任非法证书
+        client.securityPolicy.allowInvalidCertificates = YES;
+        
+        //是否在证书域名字段中验证域名
+        [client.securityPolicy setValidatesDomainName:NO];
     });
     return client;
 }

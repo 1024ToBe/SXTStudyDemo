@@ -29,7 +29,7 @@
     _sectionTitleArr = @[@"day03-SDWebImage学习",@"day04-NSURLConnection",@"NSURLSession&AFN"];
     _titleArr = @[@[@"01.沙盒路径",@"02.内存中保存图片"],
                   @[@"01.网络监听通知",@"02.网络监听Block",@"03.NSURLConnection异步",@"05.NSURLConnection同步请求",@"0601.NSURLConnection Get,Post请求:get请求",@"NSURLConnection Get,Post请求:post请求",@"07.小文件下载",@"08.大文件下载"],
-                  @[@"NSURLSession:get请求",@"NSURLSession:post请求",@"NSURLSession:下载文件",@"解压文件",@"压缩文件",@"NSURLSession 代理",@"NSURLSession 代理方式下载文件",@"断点续传",@"AFN详情",@"AFN项目实战"]
+                  @[@"NSURLSession:get请求",@"NSURLSession:post请求",@"NSURLSession:下载文件",@"解压文件",@"压缩文件",@"NSURLSession 代理",@"NSURLSession 代理方式下载文件",@"断点续传",@"AFN详情",@"AFN封装项目实战"]
     
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
